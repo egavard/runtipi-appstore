@@ -15,6 +15,12 @@
           "tcp": true
         },
         {
+          "hostPort": 8443,
+          "containerPort": 443,
+          "interface": "${NETWORK_INTERFACE:-0.0.0.0}",
+          "tcp": true
+        },
+        {
           "hostPort": 143,
           "containerPort": 143,
           "interface": "${NETWORK_INTERFACE:-0.0.0.0}",
