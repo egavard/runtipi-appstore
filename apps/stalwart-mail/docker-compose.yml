@@ -15,8 +15,8 @@ services:
       - ${NETWORK_INTERFACE:-0.0.0.0}:587:587/tcp
       - ${NETWORK_INTERFACE:-0.0.0.0}:993:993/tcp
       - ${NETWORK_INTERFACE:-0.0.0.0}:4190:4190/tcp
-      - ${APP_PORT}:8080
       - ${NETWORK_INTERFACE:-0.0.0.0}:8443:443/tcp 
+      - ${APP_PORT}:8080
     labels:
       traefik.enable: false
       traefik.http.middlewares.stalwart-mail-web-redirect.redirectscheme.scheme: https
