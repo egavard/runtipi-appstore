@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   stalwart-mail:
-    image: stalwartlabs/stalwart:v0.12.4
+    image: stalwartlabs/stalwart:v0.12.5
     container_name: stalwart-mail
     volumes:
       - ${APP_DATA_DIR}/data:/opt/stalwart
@@ -15,8 +15,8 @@ services:
       - ${NETWORK_INTERFACE:-0.0.0.0}:587:587/tcp
       - ${NETWORK_INTERFACE:-0.0.0.0}:993:993/tcp
       - ${NETWORK_INTERFACE:-0.0.0.0}:4190:4190/tcp
-      - ${APP_PORT}:8080
       - ${NETWORK_INTERFACE:-0.0.0.0}:8443:443/tcp 
+      - ${APP_PORT}:8080
     labels:
       traefik.enable: false
       traefik.http.middlewares.stalwart-mail-web-redirect.redirectscheme.scheme: https
