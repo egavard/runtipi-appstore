@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "gotify",
-      "image": "gotify/server:2.6.3",
+      "image": "gotify/server:2.7.3",
       "isMain": true,
       "internalPort": 80,
       "environment": {
@@ -13,6 +13,17 @@
         {
           "hostPath": "${APP_DATA_DIR}/data",
           "containerPath": "/app/data"
+        }
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "architecture": "arm64",
+      "services": [
+        {
+          "name": "gotify",
+          "image": "gotify/server-arm64:2.6.3"
         }
       ]
     }
