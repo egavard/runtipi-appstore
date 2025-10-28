@@ -26,11 +26,11 @@
       "environment": [
         {
           "key": "ROUNDCUBEMAIL_DEFAULT_HOST",
-          "value": "mail.bakeup.io"
+          "value": "${IMAP_HOST_ROUNDCUBE}"
         },
         {
           "key": "ROUNDCUBEMAIL_SMTP_SERVER",
-          "value": "mail.bakeup.io"
+          "value": "${SMTP_HOST_ROUNDCUBE}"
         },
         {
           "key": "ROUNDCUBEMAIL_DB_TYPE",
