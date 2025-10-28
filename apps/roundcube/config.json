@@ -17,10 +17,11 @@
   "requirements": {  },
   "form_fields": [
     {
-      "type": "ip",
-      "label": "Network Interface (default: 0.0.0.0)",
+      "type": "number",
+      "default": 8888,
+      "label": "host port default 8888",
       "required": false,
-      "env_variable": "NETWORK_INTERFACE"
+      "env_variable": "HOST_PORT_ROUNDCUBE"
     }
   ],
   "supported_architectures": ["arm64", "amd64"],
