@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "services": [
+    {
+      "name": "roundcube",
+      "image": "roundcube/roundcubemail",
+      "isMain": true,
+      "internalPort": 80,
+      "volumes": [
+        {
+          "containerPath": "/var/roundcube/db",
+          "hostPath": "${APP_DATA_DIR}/roundcube/db",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        }
+      ],
+      "addPorts": [
+        {
+          "containerPort": "80",
+          "hostPort": "8888",
+          "tcp": true,
+          "udp": true
+        }
+      ],
+      "environment": [
+        {
+          "key": "ROUNDCUBEMAIL_DEFAULT_HOST",
+          "value": "mail.bakeup.io"
+        },
+        {
+          "key": "ROUNDCUBEMAIL_SMTP_SERVER",
+          "value": "mail.bakeup.io"
+        },
+        {
+          "key": "ROUNDCUBEMAIL_DB_TYPE",
+          "value": "sqlite"
+        }
+      ]
+    }
+  ]
+}
