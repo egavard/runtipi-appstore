@@ -22,6 +22,18 @@
       "label": "host port default 8888",
       "required": false,
       "env_variable": "HOST_PORT_ROUNDCUBE"
+    },
+     {
+      "type": "fqdn",
+      "label": "SMTP Server host",
+      "required": true,
+      "env_variable": "SMTP_HOST_ROUNDCUBE"
+    },
+     {
+      "type": "fqdn",
+      "label": "IMAP Server host",
+      "required": true,
+      "env_variable": "IMAP_HOST_ROUNDCUBE"
     }
   ],
   "supported_architectures": ["arm64", "amd64"],
